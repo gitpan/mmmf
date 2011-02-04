@@ -1,7 +1,7 @@
 package mmmf;
 
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use strict;
 use warnings;
@@ -21,6 +21,21 @@ mmmf - multi-master mysql failover
   # to the new master SLAVE_ID
   #
   mmmf --cfg /etc/mmmf.conf --failover-to <SLAVE_ID> [--debug]
+
+=head1 DESCRIPTION
+
+B<mmmf> is a proof of concept tool implementing mmmf algorithm
+described here: http://www.nigilist.ru/nit/mmmf/
+
+Please note that currently the tool is a proof of concept only
+and should not be used in production environment as it does not
+implement a lot of error and random conditions checking.
+
+If you need in-depth explanation of the algorithm,
+please check out this video recorded specially for
+Mysql & friends devroom of FOSDEM 2011:
+
+http://www.youtube.com/watch?v=Qzht1B7p0yQ
 
 =head1 CONFIGURATION
 
@@ -69,18 +84,9 @@ otherwise it can be left empty.
 
   1;
 
-=head1 DESCRIPTION
-
-B<mmmf> is a proof of concept tool implementing mmmf algorithm
-described here: http://www.nigilist.ru/nit/mmmf/
-
-Please note that currently the tool is a proof of concept only
-and should not be used in production environment as it does not
-implement a lot of error and random conditions checking.
-
 =head1 CREDITS
 
-Thank you to Yandex team (in alphabetic order):
+Thanks to the whole Yandex team and personally to the following people (in alphabetic order):
 
   Andrey Grunau
   Dmitry Parfenov
