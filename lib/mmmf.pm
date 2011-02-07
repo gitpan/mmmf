@@ -1,7 +1,7 @@
 package mmmf;
 
 use vars qw($VERSION);
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 use strict;
 use warnings;
@@ -90,6 +90,7 @@ Thanks to the whole Yandex team and personally to the following people (in alpha
 
   Andrey Grunau
   Dmitry Parfenov
+  Pavel Pushkarev
   Alexey Simakov
 
 for their ideas and support.

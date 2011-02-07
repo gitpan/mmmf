@@ -47,7 +47,7 @@ sub read_config() {
     do "/etc/mmmf.conf";
   }
   else {
-    die "no --cfg option and /etc/mmmf.conf does not exist";
+    main::die "no --cfg option and /etc/mmmf.conf does not exist";
   }
 
   $cfg = $mmmf::db;
@@ -56,7 +56,7 @@ sub read_config() {
 sub log_die {
   my ($msg) = @_;
   Yandex::Tools::do_log($msg);
-  die($msg);
+  main::die($msg);
 }
 
 sub die {
@@ -112,7 +112,7 @@ sub build_change_master_sql {
   my ($opts) = @_;
   $opts = {} unless $opts;
 
-  Golem::die("Programmer error: build_change_master_sql expects host, file, position at least")
+  main::die("Programmer error: build_change_master_sql expects host, file, position at least")
     unless $opts->{'host'} && defined($opts->{'file'}) && defined($opts->{'position'});
 
   my $change_master_sql =
